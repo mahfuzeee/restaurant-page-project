@@ -127,3 +127,82 @@ a:focus {
     border: 1px solid var(--primary-color);
 
   }
+
+
+  /*Menu Section Styles*/
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 12px;
+    gap: 20px;
+    margin-bottom: 20px;
+    
+  }
+  
+  
+  .menu .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    gap: 10px;
+  }
+  
+  .container .box .img-box {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: rgb(245, 236, 218);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .container .box .img-box img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+  
+  .box .img-box img:hover {
+    transform: scale(1.05);
+  }
+  
+  .container .box .detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .container .box .detail-box h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+  }
+  
+  .container .box .detail-box p {
+    font-size: 16px;
+    color: var(--text-color);
+  }
+  
+  .container .box .detail-box span {
+    font-size: 16px;
+    color: var(--text-color);
+  }
