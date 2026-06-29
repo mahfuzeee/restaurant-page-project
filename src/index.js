@@ -1,37 +1,34 @@
 import "./styles.css";
-import HeroBgImage from "./images/hero-bg.jpg";
+import renderHomePage from "./home.js";
+import renderContactPage from "./contact.js";
+import renderMenuPage from "./menu.js";
 
+//Declaring variables
 const root = document.getElementById("content");
-
-const bgImage = document.createElement("img");
-bgImage.src = HeroBgImage;
-bgImage.alt = "Hero Background Image";
-bgImage.className = "bg-image";
-
-root.appendChild(bgImage);
-
-const detailsDiv = document.createElement("div");
-detailsDiv.className = "details";
-
-const h1 = document.createElement("h1");
-h1.textContent = "Fast Food Restaurant";
-detailsDiv.appendChild(h1);
-
-const p = document.createElement("p");
-p.textContent = "Smashed, Sizzled, and Served Hot. Your ultimate craving, delivered fresh and fast. Skip the wait and bite into perfection today.";
-detailsDiv.appendChild(p);
+const homeBtn = document.getElementById("home-btn");
+const menuBtn = document.getElementById("menu-btn");
+const contactBtn = document.getElementById("contact-btn");
 
 
-//----Order Button div
-const orderBtnDiv = document.createElement("div");
-orderBtnDiv.className = "btn-box";
+renderHomePage();
 
-const orderBtn = document.createElement("a");
-orderBtn.href = "";
-orderBtn.className = "btn1";
-orderBtn.textContent = "Order Now";
+//Create Click Event Listeners
+homeBtn.addEventListener("click", () => {
+    root.innerHTML = "";
+    renderHomePage();
+    
+    
+});
 
-orderBtnDiv.appendChild(orderBtn);
+menuBtn.addEventListener("click", () => {
+    root.innerHTML = "";
+    renderMenuPage();
+    
+});
 
-detailsDiv.appendChild(orderBtnDiv)
-root.appendChild(detailsDiv);
+contactBtn.addEventListener("click", () => {
+    root.innerHTML = "";
+    renderContactPage();
+    
+});
+

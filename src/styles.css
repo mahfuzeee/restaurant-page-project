@@ -1,7 +1,15 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f7d411;
+    --text-color: #f2f3f4;
+    --background-color: #1a1a1a;
+}
+
 body {
     margin: 0;
     padding: 0;
-    color: #f2f3f4;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 .navbar {
@@ -15,7 +23,7 @@ body {
 .navbar-brand {
     font-size: 24px;
     font-weight: bold;
-    color: #f2f3f4;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -32,7 +40,7 @@ li {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: var(--primary-color);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -45,7 +53,7 @@ button {
 }
 
 button:hover {
-    background-color: #f7d411;
+    background-color: var(--secondary-color);
     cursor: pointer;
 }
 
@@ -67,7 +75,10 @@ button:hover {
     align-items: center;
 }
 
-
+.details p {
+    
+    font-size: 20px;
+}
 
 a,
 a:hover,
@@ -79,10 +90,9 @@ a:focus {
 .btn-box a {
     display: inline-block;
     padding: 10px 45px;
-    background-color: #ffbe33;
-    color: #ffffff;
-    border-radius: 45px;
-    -webkit-transition: all 0.3s;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 40px;
     transition: all 0.3s;
     border: none;
     margin-top: 10px;
@@ -100,5 +110,20 @@ a:focus {
 
   footer p {
     padding: 4px;
+
+  }
+
+/* Contact Page Styles */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-color);
 
   }
